@@ -1,0 +1,97 @@
+{
+  "name": "cordova-plugin-camera",
+  "version": "2.3.0",
+  "description": "Cordova Camera Plugin",
+  "cordova": {
+    "id": "cordova-plugin-camera",
+    "platforms": [
+      "firefoxos",
+      "android",
+      "amazon-fireos",
+      "ubuntu",
+      "ios",
+      "blackberry10",
+      "wp7",
+      "wp8",
+      "windows8",
+      "browser",
+      "windows"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-camera.git"
+  },
+  "keywords": [
+    "cordova",
+    "camera",
+    "ecosystem:cordova",
+    "cordova-firefoxos",
+    "cordova-android",
+    "cordova-amazon-fireos",
+    "cordova-ubuntu",
+    "cordova-ios",
+    "cordova-blackberry10",
+    "cordova-wp7",
+    "cordova-wp8",
+    "cordova-windows8",
+    "cordova-browser",
+    "cordova-windows"
+  ],
+  "scripts": {
+    "precommit": "npm run gen-docs && git add README.md",
+    "gen-docs": "jsdoc2md --template \"jsdoc2md/TEMPLATE.md\" \"www/**/*.js\" --plugin \"dmd-plugin-cordova-plugin\" > README.md",
+    "test": "npm run jshint",
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests"
+  },
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "devDependencies": {
+    "dmd-plugin-cordova-plugin": "^0.1.0",
+    "husky": "^0.10.1",
+    "jsdoc-to-markdown": "^1.2.0",
+    "jshint": "^2.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/apache/cordova-plugin-camera/issues"
+  },
+  "homepage": "https://github.com/apache/cordova-plugin-camera#readme",
+  "_id": "cordova-plugin-camera@2.3.0",
+  "_shasum": "af2f56699dd87ba209c8d55d0975c6ea0999d49c",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-camera/-/cordova-plugin-camera-2.3.0.tgz",
+  "_from": "cordova-plugin-camera@2.3.0",
+  "_npmVersion": "3.10.6",
+  "_nodeVersion": "5.4.1",
+  "_npmUser": {
+    "name": "stevegill",
+    "email": "stevengill97@gmail.com"
+  },
+  "dist": {
+    "shasum": "af2f56699dd87ba209c8d55d0975c6ea0999d49c",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-camera/-/cordova-plugin-camera-2.3.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "csantanapr",
+      "email": "csantana23@gmail.com"
+    },
+    {
+      "name": "stevegill",
+      "email": "stevengill97@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-camera-2.3.0.tgz_1473901406632_0.6826180210337043"
+  },
+  "directories": {}
+}
