@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+
+	<!-- Include the jQuery library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+
+	<!-- Include the jQuery Mobile library -->
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
 </head>
 	<body>
 		<!--Page 1-->
 		<div data-role="page" id="id_page1">
 		  <div data-role="header">
 		    <h1>Welcome To My Homepage</h1>
-		    <a href="href="#id_page2"">Go to second page</a>
+		    <a href="#id_page2" 
+		    data-transition="flip">Go to second page</a>
 		  </div>
 
 		  <div data-role="main" class="ui-content">
@@ -22,11 +31,15 @@
 		  	<h1>Footer Text</h1>
 		  </div>
 		</div>
+		<!--End of Page 1-->
 		<!--Page 2-->
 		<div data-role="page" id="id_page2">
 		  <div data-role="header">
-		    <h1>Welcome To My Second page</h1>
-		    <a href="#id_page1">Go to first page</a>
+		    <div data-role="controlgroup" data-type="horizontal">
+  				<a href="#id_page1" class="ui-btn ui-icon-home ui-btn-icon-left">Go to first page</a>
+  				<a href="#" class="ui-btn">Button 2</a>
+  				<a href="#" class="ui-btn">Button 3</a>
+			</div>
 		  </div>
 
 		  <div data-role="main" class="ui-content">
@@ -37,5 +50,6 @@
 		  	<h1>Footer Text</h1>
 		  </div>
 		</div>
+		<!--End of Page 2-->
 	</body>
 </html>
