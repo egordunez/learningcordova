@@ -7,10 +7,12 @@
 </head>
 <body>
 	<div ng-controller = "StoreController as storeAlias">
-		<h1>{{storeAlias.product.name}}</h1>
-		<h1>{{storeAlias.product.price}}</h1>
-		<h1>{{storeAlias.product.description}}</h1>
-		<button ng-show = "storeAlias.product.canPurchace">Add to cart</button>
+		<div ng-repeat = "product in storeAlias.products">
+			<h1>{{product.name}}</h1>
+			<h1>{{product.price}}</h1>
+			<h1>{{product.description}}</h1>
+			<button ng-show = "product.canPurchace">Add to cart</button>
+		</div>
 	</div>
 </body>
 </html>
