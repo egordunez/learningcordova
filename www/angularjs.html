@@ -7,11 +7,37 @@
 </head>
 <body>
 	<div ng-controller = "StoreController as storeAlias">
-		<div ng-repeat = "product in storeAlias.products">
-			<h1>{{product.name}}</h1>
-			<h1>{{product.price}}</h1>
-			<h1>{{product.description}}</h1>
+		<div ng-repeat = "product in storeAlias.products | orderBy:'-price'">
+			<h1>{{product.name | uppercase}}</h1>
+			<h1>{{product.price | currency }}</h1>
+			<h1>{{product.description | limitTo:8}}</h1>
+			<h2>{{product.date | date:'MM/dd/yyyy@h:mma'}}</h2>
 			<button ng-show = "product.canPurchace">Add to cart</button>
+		</div>
+		<section>
+			<ul clas="nav nav-pills">
+				<li>
+					<a href ng-click="tab = 1">Description<a/>
+				</li>
+				<li>
+					<a href ng-click="tab = 2">Specification<a/>
+				</li>
+				<li>
+					<a href ng-click="tab = 3">Reviews<a/>
+				</li>
+			</ul>
+		</section>
+		<div class="panel" ng-show="tab === 1">
+			<h4>Description</h4>
+			<h5>{{product.description}}</h5>
+		</div>
+		<div class="panel" ng-show="tab === 2">
+			<h4>Specification</h4>
+			<h5>{{product.date | date:'MM/dd/yyyy@h:mma'}}</h5>
+		</div>
+		<div class="panel" ng-show="tab === 3">
+			<h4>Reviews</h4>
+			<h5>{{product.description}}</h5>
 		</div>
 	</div>
 </body>

@@ -6,15 +6,17 @@
 	var gems = [
 		{
 			name : "Dodecahedron",
-			price : 2.95 ,
-			description : "...",
-			canPurchace : false
+			price : 5.956 ,
+			description : "abcdefghijklm",
+			canPurchace : false,
+			date : "1388123412323"
 		},
 		{
-			name : "Dodecahedron",
-			price : 2.95 ,
-			description : "...",
-			canPurchace : true
+			name : "Penthagonal gem",
+			price : 2 ,
+			description : "...abcdefghijklm",
+			canPurchace : true,
+			date : "1388123472323"
 		}
 	];
 })();
